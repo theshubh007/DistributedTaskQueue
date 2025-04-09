@@ -15,3 +15,173 @@ Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive fai
 Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
 Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
 Wed Apr 09 03:03:46 2025 [INFO] Task 203 enqueued.
+Wed Apr 09 03:09:09 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 03:09:09 2025 [ERROR] Bind failed.
+Wed Apr 09 03:09:22 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 03:09:22 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:10:40 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:10:40 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:58 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:59 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:59 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:59 2025 [INFO] New connection accepted.
+Wed Apr 09 03:10:59 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:59 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:10:59 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:11:14 2025 [INFO] New connection accepted.
+Wed Apr 09 03:11:14 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:25 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:17:25 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:45 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:46 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:46 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:46 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:46 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:46 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:46 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:17:53 2025 [INFO] New connection accepted.
+Wed Apr 09 03:17:53 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:23:58 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:23:58 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:24:15 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:15 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:15 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:15 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:15 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:15 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:24:27 2025 [INFO] New connection accepted.
+Wed Apr 09 03:24:27 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:37:50 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:37:50 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:37:55 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:37:55 2025 [ERROR] Bind failed.
+Wed Apr 09 03:38:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:16 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:38:17 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:41:12 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:41:12 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:42:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:42:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:46:57 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:46:57 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:47:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:10 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:10 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [INFO] New connection accepted.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:47:11 2025 [ERROR] Failed to receive message: Receive failed or connection closed.
+Wed Apr 09 03:54:58 2025 [INFO] Starting Distributed Task Queue Server...
+Wed Apr 09 03:54:58 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:16 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:17 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:17 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:17 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:17 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:55 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:55 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:55 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:55 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:55 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:55 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:56 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:56 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:56 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:56 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:56 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:56 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:57 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:57 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:57 2025 [INFO] New connection accepted.
+Wed Apr 09 03:55:57 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:57 2025 [INFO] Client disconnected normally.
+Wed Apr 09 03:55:57 2025 [INFO] Client disconnected normally.

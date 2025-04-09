@@ -1,30 +1,27 @@
 #include "TaskQueue.h"
+#include "Config.h"
 #include "Logger.h"
 #include <algorithm>
-#include "Config.h"
 
 namespace dtq
 {
 
-    TaskQueue::TaskQueue()
-    {
-    }
-
-    TaskQueue::~TaskQueue()
-    {
-    }
+    TaskQueue::TaskQueue() {}
+    TaskQueue::~TaskQueue() {}
 
     bool TaskQueue::enqueue(const Task &task)
     {
         std::lock_guard<std::mutex> lock(queueMutex);
         if (queue.size() >= Config::MaxQueueSize)
         {
-            Logger::getInstance().log(LogLevel::WARN, "Queue is full. Task " + std::to_string(task.taskId) + " rejected.");
+            Logger::getInstance().log(LogLevel::WARN,
+                                      "Queue is full. Task " + std::to_string(task.taskId) + " rejected.");
             return false;
         }
         queue.push(task);
         condition.notify_one();
-        Logger::getInstance().log(LogLevel::INFO, "Task " + std::to_string(task.taskId) + " enqueued.");
+        Logger::getInstance().log(LogLevel::INFO,
+                                  "Task " + std::to_string(task.taskId) + " enqueued. Queue size=" + std::to_string(queue.size()));
         return true;
     }
 
@@ -37,16 +34,16 @@ namespace dtq
         }
         Task task = queue.front();
         queue.pop();
-        Logger::getInstance().log(LogLevel::INFO, "Task " + std::to_string(task.taskId) + " dequeued.");
+        Logger::getInstance().log(LogLevel::INFO,
+                                  "Task " + std::to_string(task.taskId) + " dequeued. Queue size=" + std::to_string(queue.size()));
         return task;
     }
 
     bool TaskQueue::updateTaskResult(int taskId, const std::string &result, TaskStatus status)
     {
-        std::lock_guard<std::mutex> lock(queueMutex);
-        // For demonstration, we will only log the update.
-        // In a real-world scenario, you might maintain a separate mapping for taskId to task.
-        Logger::getInstance().log(LogLevel::INFO, "Task " + std::to_string(taskId) + " updated with result: " + result);
+        // For demonstration, we only log. In a real system, you'd maintain a map from taskId -> task record, etc.
+        Logger::getInstance().log(LogLevel::INFO,
+                                  "Task " + std::to_string(taskId) + " updated with result: " + result);
         return true;
     }
 

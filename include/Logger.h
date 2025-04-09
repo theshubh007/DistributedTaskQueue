@@ -7,8 +7,6 @@
 
 namespace dtq
 {
-
-    // Log levels. Use ERR instead of ERROR to avoid Windows macro conflicts.
     enum class LogLevel
     {
         INFO,
@@ -19,25 +17,18 @@ namespace dtq
     class Logger
     {
     public:
-        // Retrieve the singleton instance.
         static Logger &getInstance();
-
-        // Log a message with the given log level.
         void log(LogLevel level, const std::string &message);
-
-        // Optionally set the log file.
         void setLogFile(const std::string &filename);
 
     private:
-        Logger(); // Private constructor for singleton pattern.
+        Logger();
         ~Logger();
-        Logger(const Logger &) = delete; // Disable copy constructor.
+        Logger(const Logger &) = delete;
         Logger &operator=(const Logger &) = delete;
 
         std::ofstream logFile;
         std::mutex logMutex;
-
-        // Helper to convert log level to string.
         std::string levelToString(LogLevel level);
     };
 

@@ -10,6 +10,15 @@
 
 namespace dtq
 {
+    // Distinguish message types (client add task, worker request, etc.)
+    enum class MessageType : int
+    {
+        CLIENT_ADD_TASK = 1,
+        WORKER_GET_TASK = 2,
+        WORKER_SEND_RESULT = 3,
+        SERVER_SEND_TASK = 4,
+        INVALID = 99
+    };
 
     class Network
     {
@@ -17,29 +26,34 @@ namespace dtq
         static bool initialize();
         static void cleanup();
 
-        // Nested class for a network connection
         class Connection
         {
         public:
-            // 1) Existing constructor for creating a new socket
-            Connection(const std::string &address, int port);
-
-            // 2) New constructor for using an already-accepted socket
 #ifdef _WIN32
-            Connection(SOCKET acceptedSocket);
+            Connection(SOCKET acceptedSocket); // server side
 #else
             Connection(int acceptedSocket);
 #endif
-
+            Connection(const std::string &address, int port); // client side
             ~Connection();
 
-            bool connect();
+            bool connect(); // for client
             void disconnect();
+
+            // Low-level send/recv
             bool send(const std::vector<char> &data);
             bool receive(std::vector<char> &buffer);
+
+            // Framed messages
+            bool sendMessage(MessageType type, const std::string &payload);
+            bool receiveMessage(MessageType &outType, std::string &outPayload);
+
             std::string getLastError() const;
 
         private:
+            bool sendAll(const char *data, int size);
+            bool recvAll(char *data, int size);
+
             std::string serverAddress;
             int serverPort;
 #ifdef _WIN32

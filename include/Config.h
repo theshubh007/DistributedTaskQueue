@@ -4,34 +4,31 @@
 #include <chrono>
 #include <string>
 
-namespace dtq {
+namespace dtq
+{
 
-// Hyperparameters and configuration settings for the Distributed Task Queue.
-class Config {
-public:
-    // Maximum number of tasks allowed in the queue.
-    static const int MaxQueueSize = 1000;
-    
-    // Number of threads available for processing tasks.
-    static const int ThreadPoolSize = 8;
-    
-    // Network timeout duration (in milliseconds).
-    static const std::chrono::milliseconds NetworkTimeout;
+    // Hyperparameters and configuration settings for the Distributed Task Queue.
+    class Config
+    {
+    public:
+        // Maximum number of tasks allowed in the queue.
+        static const int MaxQueueSize;
 
-    // Maximum number of times to retry a failed task.
-    static const int TaskRetryLimit = 3;
-    
-    // Interval (in milliseconds) for workers to send heartbeat messages.
-    static const std::chrono::milliseconds HeartbeatInterval;
-    
-    // Batch size if tasks are processed in batches.
-    static const int BatchSize = 10;
+        // Number of threads or any concurrency setting, if you want to implement a thread pool in server/worker.
+        static const int ThreadPoolSize;
 
-    // Additional configuration parameters can be added here.
-    
-    // Optional: Function to load configuration from a file.
-    static bool loadConfig(const std::string& filename);
-};
+        // Network timeout duration (in milliseconds).
+        static const std::chrono::milliseconds NetworkTimeout;
+
+        // Maximum number of times to retry a failed task.
+        static const int TaskRetryLimit;
+
+        // Interval (in milliseconds) for workers to send heartbeat messages, etc.
+        static const std::chrono::milliseconds HeartbeatInterval;
+
+        // Optionally load configuration from file.
+        static bool loadConfig(const std::string &filename);
+    };
 
 } // namespace dtq
 

@@ -7,12 +7,14 @@
 
 using namespace dtq;
 
-int main() {
+int main()
+{
     Logger::getInstance().setLogFile("client.log");
     Logger::getInstance().log(LogLevel::INFO, "Starting Task Queue Client...");
 
     // Initialize network
-    if (!Network::initialize()) {
+    if (!Network::initialize())
+    {
         Logger::getInstance().log(LogLevel::ERROR, "Network initialization failed.");
         return -1;
     }
@@ -25,18 +27,19 @@ int main() {
 
     // Serialize the task
     std::string serializedTask = task.serialize();
-    std::vector<char> data(serializedTask.begin(), serializedTask.end());
 
     // Connect to the server (change IP and port as necessary)
-    Network::Connection connection("127.0.0.1", 5555);
-    if (!connection.connect()) {
+    Network::Connection connection("127.0.0.1", 5555); // Updated to match server port
+    if (!connection.connect())
+    {
         Logger::getInstance().log(LogLevel::ERR, "Client failed to connect to server: " + connection.getLastError());
         Network::cleanup();
         return -1;
     }
 
-    // Send the task
-    if (!connection.send(data)) {
+    // Send the task using the appropriate message type
+    if (!connection.sendMessage(MessageType::CLIENT_ADD_TASK, serializedTask))
+    {
         Logger::getInstance().log(LogLevel::ERROR, "Client failed to send task: " + connection.getLastError());
         connection.disconnect();
         Network::cleanup();

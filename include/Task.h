@@ -3,52 +3,79 @@
 
 #include <string>
 #include <sstream>
+#include <chrono>
 
-namespace dtq {
+namespace dtq
+{
 
-// Enum representing the state of a task.
-enum class TaskStatus {
-    PENDING,
-    IN_PROGRESS,
-    COMPLETED,
-    FAILED
-};
+    // Enum representing the state of a task.
+    enum class TaskStatus
+    {
+        PENDING,
+        IN_PROGRESS,
+        COMPLETED,
+        FAILED
+    };
 
-// Structure representing a task in the queue.
-struct Task {
-    int taskId;
-    std::string payload;  // Task data; this can be modified to a more complex type if needed.
-    TaskStatus status;
-    std::string result;   // Result after processing the task.
-    int retryCount;       // Number of times the task has been retried.
+    struct Task
+    {
+        int taskId;
+        std::string payload;
+        TaskStatus status;
+        std::string result;
+        int retryCount;
 
-    Task() : taskId(0), status(TaskStatus::PENDING), retryCount(0) {}
+        // For throughput measurement: time (in ms) when the task was enqueued.
+        long long enqueueTimeMs;
 
-    // Serialize the task to a string (for network transfer).
-    std::string serialize() const {
-        std::ostringstream oss;
-        oss << taskId << "|" << payload << "|" << static_cast<int>(status) << "|" << result << "|" << retryCount;
-        return oss.str();
-    }
+        Task() : taskId(0), status(TaskStatus::PENDING), retryCount(0), enqueueTimeMs(0) {}
 
-    // Deserialize a task from a string.
-    static Task deserialize(const std::string& data) {
-        Task task;
-        std::istringstream iss(data);
-        std::string token;
-        if (std::getline(iss, token, '|'))
-            task.taskId = std::stoi(token);
-        if (std::getline(iss, token, '|'))
-            task.payload = token;
-        if (std::getline(iss, token, '|'))
-            task.status = static_cast<TaskStatus>(std::stoi(token));
-        if (std::getline(iss, token, '|'))
-            task.result = token;
-        if (std::getline(iss, token, '|'))
-            task.retryCount = std::stoi(token);
-        return task;
-    }
-};
+        std::string serialize() const
+        {
+            // Basic serialization with '|' delimiter
+            std::ostringstream oss;
+            oss << taskId << "|"
+                << payload << "|"
+                << static_cast<int>(status) << "|"
+                << result << "|"
+                << retryCount << "|"
+                << enqueueTimeMs;
+            return oss.str();
+        }
+
+        static Task deserialize(const std::string &data)
+        {
+            Task task;
+            std::istringstream iss(data);
+            std::string token;
+
+            if (std::getline(iss, token, '|'))
+            {
+                task.taskId = std::stoi(token);
+            }
+            if (std::getline(iss, token, '|'))
+            {
+                task.payload = token;
+            }
+            if (std::getline(iss, token, '|'))
+            {
+                task.status = static_cast<TaskStatus>(std::stoi(token));
+            }
+            if (std::getline(iss, token, '|'))
+            {
+                task.result = token;
+            }
+            if (std::getline(iss, token, '|'))
+            {
+                task.retryCount = std::stoi(token);
+            }
+            if (std::getline(iss, token, '|'))
+            {
+                task.enqueueTimeMs = std::stoll(token);
+            }
+            return task;
+        }
+    };
 
 } // namespace dtq
 
