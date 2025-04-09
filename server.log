@@ -1,0 +1,17 @@
+Wed Apr 09 02:49:28 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 02:49:28 2025 [INFO] Server shutting down.
+Wed Apr 09 02:56:38 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 02:56:38 2025 [INFO] Server shutting down.
+Wed Apr 09 03:01:04 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 03:01:04 2025 [INFO] Server shutting down.
+Wed Apr 09 03:03:20 2025 [INFO] Starting Task Queue Server...
+Wed Apr 09 03:03:20 2025 [INFO] Server listening on port 5555...
+Wed Apr 09 03:03:45 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:45 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:45 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [ERROR] Failed to receive data from client: Receive failed or connection closed.
+Wed Apr 09 03:03:46 2025 [INFO] Task 203 enqueued.

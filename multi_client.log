@@ -1,0 +1,21 @@
+Wed Apr 09 02:57:29 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 02:57:31 2025 [ERROR] [User 1] Failed to connect: Connect failed.
+Wed Apr 09 02:57:31 2025 [ERROR] [User 3] Failed to connect: Connect failed.
+Wed Apr 09 02:57:31 2025 [ERROR] [User 2] Failed to connect: Connect failed.
+Wed Apr 09 02:57:31 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 03:01:19 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 03:01:21 2025 [ERROR] [User 1] Failed to connect: Connect failed.
+Wed Apr 09 03:01:21 2025 [ERROR] [User 2] Failed to connect: Connect failed.
+Wed Apr 09 03:01:21 2025 [ERROR] [User 3] Failed to connect: Connect failed.
+Wed Apr 09 03:01:21 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 03:03:45 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 03:03:45 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 03:03:45 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 03:03:45 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 03:03:46 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 03:03:46 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 03:03:46 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 03:03:46 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 03:03:46 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 03:03:46 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 03:03:47 2025 [INFO] All users have finished sending tasks.
