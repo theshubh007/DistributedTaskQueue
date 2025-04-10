@@ -15,7 +15,6 @@ namespace dtq
 
     Logger::Logger()
     {
-        // Optionally, set a default log file here.
     }
 
     Logger::~Logger()

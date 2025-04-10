@@ -34,4 +34,4 @@ namespace dtq
 
 } // namespace dtq
 
-#endif // LOGGER_H
+#endif

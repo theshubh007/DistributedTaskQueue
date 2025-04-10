@@ -10,13 +10,16 @@
 
 namespace dtq
 {
-    // Distinguish message types (client add task, worker request, etc.)
     enum class MessageType : int
     {
         CLIENT_ADD_TASK = 1,
-        WORKER_GET_TASK = 2,
-        WORKER_SEND_RESULT = 3,
-        SERVER_SEND_TASK = 4,
+        WORKER_REQUEST_TASK = 2,
+        WORKER_SUBMIT_RESULT = 3,
+        SERVER_ASSIGN_TASK = 4,
+        SERVER_TASK_ACCEPTED = 5,
+        SERVER_TASK_REJECTED = 6,
+        WORKER_TASK_RECEIVED = 7,
+        SERVER_RESULT_CONFIRMED = 8,
         INVALID = 99
     };
 
@@ -29,31 +32,31 @@ namespace dtq
         class Connection
         {
         public:
+            // Client-side constructor
+            Connection(const std::string &serverAddr, int port)
+                : serverAddress(serverAddr), serverPort(port), socketDescriptor(INVALID_SOCKET) {}
+            
+            // Server-side constructor for accepted connections
 #ifdef _WIN32
-            Connection(SOCKET acceptedSocket); // server side
+            explicit Connection(SOCKET acceptedSocket) 
+                : serverAddress(""), serverPort(0), socketDescriptor(acceptedSocket) {}
 #else
-            Connection(int acceptedSocket);
+            explicit Connection(int acceptedSocket)
+                : serverAddress(""), serverPort(0), socketDescriptor(acceptedSocket) {}
 #endif
-            Connection(const std::string &address, int port); // client side
-            ~Connection();
-
-            bool connect(); // for client
+            
+            ~Connection() { disconnect(); }
+            
+            bool connect();
             void disconnect();
-
-            // Low-level send/recv
-            bool send(const std::vector<char> &data);
-            bool receive(std::vector<char> &buffer);
-
-            // Framed messages
             bool sendMessage(MessageType type, const std::string &payload);
-            bool receiveMessage(MessageType &outType, std::string &outPayload);
-
-            std::string getLastError() const;
+            bool receiveMessage(MessageType &type, std::string &payload);
+            const std::string &getLastError() const { return lastError; }
 
         private:
-            bool sendAll(const char *data, int size);
-            bool recvAll(char *data, int size);
-
+            bool send(const char* data, int size);
+            bool recvAll(char* buffer, int size);
+            
             std::string serverAddress;
             int serverPort;
 #ifdef _WIN32

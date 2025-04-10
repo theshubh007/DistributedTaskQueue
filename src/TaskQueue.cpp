@@ -41,7 +41,6 @@ namespace dtq
 
     bool TaskQueue::updateTaskResult(int taskId, const std::string &result, TaskStatus status)
     {
-        // For demonstration, we only log. In a real system, you'd maintain a map from taskId -> task record, etc.
         Logger::getInstance().log(LogLevel::INFO,
                                   "Task " + std::to_string(taskId) + " updated with result: " + result);
         return true;

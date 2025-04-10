@@ -3,12 +3,10 @@
 
 #include <string>
 #include <sstream>
-#include <chrono>
 
 namespace dtq
 {
 
-    // Enum representing the state of a task.
     enum class TaskStatus
     {
         PENDING,
@@ -25,21 +23,15 @@ namespace dtq
         std::string result;
         int retryCount;
 
-        // For throughput measurement: time (in ms) when the task was enqueued.
-        long long enqueueTimeMs;
+        long long enqueueTimeMs; // for measuring latency
 
         Task() : taskId(0), status(TaskStatus::PENDING), retryCount(0), enqueueTimeMs(0) {}
 
         std::string serialize() const
         {
-            // Basic serialization with '|' delimiter
             std::ostringstream oss;
-            oss << taskId << "|"
-                << payload << "|"
-                << static_cast<int>(status) << "|"
-                << result << "|"
-                << retryCount << "|"
-                << enqueueTimeMs;
+            oss << taskId << "|" << payload << "|" << (int)status << "|" << result << "|"
+                << retryCount << "|" << enqueueTimeMs;
             return oss.str();
         }
 
@@ -48,31 +40,18 @@ namespace dtq
             Task task;
             std::istringstream iss(data);
             std::string token;
-
             if (std::getline(iss, token, '|'))
-            {
                 task.taskId = std::stoi(token);
-            }
             if (std::getline(iss, token, '|'))
-            {
                 task.payload = token;
-            }
             if (std::getline(iss, token, '|'))
-            {
-                task.status = static_cast<TaskStatus>(std::stoi(token));
-            }
+                task.status = (TaskStatus)std::stoi(token);
             if (std::getline(iss, token, '|'))
-            {
                 task.result = token;
-            }
             if (std::getline(iss, token, '|'))
-            {
                 task.retryCount = std::stoi(token);
-            }
             if (std::getline(iss, token, '|'))
-            {
                 task.enqueueTimeMs = std::stoll(token);
-            }
             return task;
         }
     };

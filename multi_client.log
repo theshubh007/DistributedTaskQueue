@@ -107,3 +107,390 @@ Wed Apr 09 03:55:57 2025 [INFO] [User 2] Sent task ID=203
 Wed Apr 09 03:55:57 2025 [INFO] [User 3] Sent task ID=303
 Wed Apr 09 03:55:57 2025 [INFO] [User 1] Sent task ID=103
 Wed Apr 09 03:55:57 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:03:52 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:03:52 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:03:52 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:03:52 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:03:52 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:03:52 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:03:52 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:03:53 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:03:53 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:03:53 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:03:53 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:09:36 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:09:36 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:09:36 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:09:36 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:09:37 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:09:37 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:09:37 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:09:37 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:09:37 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:09:37 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:09:38 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:09:38 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:09:38 2025 [INFO] [User 3] Sent task ID=304
+Wed Apr 09 04:09:38 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:09:38 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:09:38 2025 [INFO] [User 3] Sent task ID=305
+Wed Apr 09 04:09:39 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:13:07 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:13:07 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:13:07 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:13:07 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:13:08 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:13:08 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:13:08 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:13:09 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:13:09 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:13:09 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:13:09 2025 [INFO] [User 3] Sent task ID=304
+Wed Apr 09 04:13:09 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:13:09 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:13:10 2025 [INFO] [User 3] Sent task ID=305
+Wed Apr 09 04:13:10 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:13:10 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:13:10 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:17:38 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:17:38 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:17:38 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:17:38 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:17:38 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:17:38 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:17:38 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:17:39 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:17:39 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:17:39 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:17:39 2025 [INFO] [User 3] Sent task ID=304
+Wed Apr 09 04:17:39 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:17:39 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:17:40 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:17:40 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:17:40 2025 [INFO] [User 3] Sent task ID=305
+Wed Apr 09 04:17:40 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:21:31 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:21:31 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:21:31 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:21:31 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:21:31 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:21:31 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:21:31 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:21:32 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:21:32 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:21:32 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:21:32 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:21:32 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:21:32 2025 [INFO] [User 3] Sent task ID=304
+Wed Apr 09 04:21:33 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:21:33 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:21:33 2025 [INFO] [User 3] Sent task ID=305
+Wed Apr 09 04:21:33 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:25:22 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:25:22 2025 [INFO] [User 3] Sent task ID=301
+Wed Apr 09 04:25:22 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:25:22 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:25:22 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:25:22 2025 [INFO] [User 3] Sent task ID=302
+Wed Apr 09 04:25:22 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:25:22 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:25:22 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:25:22 2025 [INFO] [User 3] Sent task ID=303
+Wed Apr 09 04:25:22 2025 [INFO] [User 3] Sent task ID=304
+Wed Apr 09 04:25:22 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:25:22 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:25:22 2025 [INFO] [User 3] Sent task ID=305
+Wed Apr 09 04:25:22 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:25:22 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:25:23 2025 [INFO] [User 1] Sent task ID=106
+Wed Apr 09 04:25:23 2025 [INFO] [User 2] Sent task ID=206
+Wed Apr 09 04:25:23 2025 [INFO] [User 3] Sent task ID=306
+Wed Apr 09 04:25:23 2025 [INFO] [User 2] Sent task ID=207
+Wed Apr 09 04:25:23 2025 [INFO] [User 1] Sent task ID=107
+Wed Apr 09 04:25:23 2025 [INFO] [User 3] Sent task ID=307
+Wed Apr 09 04:25:23 2025 [INFO] [User 1] Sent task ID=108
+Wed Apr 09 04:25:23 2025 [INFO] [User 2] Sent task ID=208
+Wed Apr 09 04:25:23 2025 [INFO] [User 3] Sent task ID=308
+Wed Apr 09 04:25:23 2025 [INFO] [User 2] Sent task ID=209
+Wed Apr 09 04:25:23 2025 [INFO] [User 1] Sent task ID=109
+Wed Apr 09 04:25:23 2025 [INFO] [User 3] Sent task ID=309
+Wed Apr 09 04:25:23 2025 [INFO] [User 2] Sent task ID=210
+Wed Apr 09 04:25:23 2025 [INFO] [User 1] Sent task ID=110
+Wed Apr 09 04:25:23 2025 [INFO] [User 3] Sent task ID=310
+Wed Apr 09 04:25:24 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:28:48 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:28:48 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:28:48 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:28:48 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:28:48 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:28:49 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:28:49 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:28:49 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:28:49 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:28:50 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:28:50 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:28:50 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:28:50 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:28:51 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:28:51 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:28:51 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:28:51 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:28:52 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:28:52 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:28:52 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:28:52 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:28:53 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:33:53 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:33:53 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:33:53 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:33:53 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:33:53 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:33:54 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:33:54 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:33:54 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:33:54 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:33:55 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:33:55 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:33:55 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:33:55 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:33:56 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:33:56 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:33:56 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:33:56 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:33:57 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:33:57 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:33:57 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:33:57 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:33:58 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:35:10 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:35:10 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:35:10 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:35:10 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:35:10 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:35:11 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:35:11 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:35:11 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:35:11 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:35:12 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:35:12 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:35:12 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:35:12 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:35:13 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:35:13 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:35:13 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:35:13 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:35:14 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:35:14 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:35:14 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:35:14 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:35:15 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:38:59 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:38:59 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:38:59 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:38:59 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:38:59 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:39:00 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:39:00 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:39:00 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:39:00 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:39:01 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:39:01 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:39:01 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:39:01 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:39:02 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:39:02 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:39:02 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:39:02 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:39:03 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:39:03 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:39:03 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:39:03 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:39:04 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:40:04 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:40:04 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:40:04 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:40:04 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:40:04 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:40:05 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:40:05 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:40:05 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:40:05 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:40:06 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:40:06 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:40:06 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:40:06 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:40:07 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:40:07 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:40:07 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:40:07 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:40:08 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:40:08 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:40:08 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:40:08 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:40:09 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 04:43:12 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 04:43:12 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 04:43:12 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 04:43:12 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 04:43:12 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 04:43:13 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 04:43:13 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 04:43:13 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 04:43:13 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 04:43:14 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 04:43:14 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 04:43:14 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 04:43:14 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 04:43:15 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 04:43:15 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 04:43:15 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 04:43:15 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 04:43:16 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 04:43:16 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 04:43:16 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 04:43:16 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 04:43:17 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 14:02:05 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 14:02:05 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 14:02:05 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 14:02:05 2025 [INFO] [User 2] Sent task ID=201
+Wed Apr 09 14:02:05 2025 [INFO] [User 1] Sent task ID=101
+Wed Apr 09 14:02:06 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 14:02:06 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 14:02:06 2025 [INFO] [User 1] Sent task ID=102
+Wed Apr 09 14:02:06 2025 [INFO] [User 2] Sent task ID=202
+Wed Apr 09 14:02:07 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 14:02:07 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 14:02:07 2025 [INFO] [User 2] Sent task ID=203
+Wed Apr 09 14:02:07 2025 [INFO] [User 1] Sent task ID=103
+Wed Apr 09 14:02:08 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 14:02:08 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 14:02:08 2025 [INFO] [User 2] Sent task ID=204
+Wed Apr 09 14:02:08 2025 [INFO] [User 1] Sent task ID=104
+Wed Apr 09 14:02:09 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 14:02:09 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 14:02:09 2025 [INFO] [User 2] Sent task ID=205
+Wed Apr 09 14:02:09 2025 [INFO] [User 1] Sent task ID=105
+Wed Apr 09 14:02:10 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 14:22:16 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 14:22:16 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 14:22:16 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 14:22:16 2025 [ERROR] [User 2] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:16 2025 [ERROR] [User 1] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:17 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 14:22:17 2025 [ERROR] [User 1] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:17 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 14:22:17 2025 [ERROR] [User 2] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:18 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 14:22:18 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 14:22:18 2025 [ERROR] [User 2] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:18 2025 [ERROR] [User 1] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:19 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 14:22:19 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 14:22:19 2025 [ERROR] [User 2] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:19 2025 [ERROR] [User 1] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:20 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 14:22:20 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 14:22:20 2025 [ERROR] [User 2] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:20 2025 [ERROR] [User 1] Failed to receive acknowledgment: Receive failed or connection closed.
+Wed Apr 09 14:22:21 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 14:29:52 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 14:29:52 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 14:29:52 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 14:29:52 2025 [ERROR] [User 1] Failed to send task: Send failed
+Wed Apr 09 14:29:52 2025 [ERROR] [User 2] Failed to send task: Send failed
+Wed Apr 09 14:29:53 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 14:29:53 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 14:29:53 2025 [ERROR] [User 1] Failed to send task: Send failed
+Wed Apr 09 14:29:53 2025 [ERROR] [User 2] Failed to send task: Send failed
+Wed Apr 09 14:29:54 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 14:29:54 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 14:29:54 2025 [ERROR] [User 1] Failed to send task: Send failed
+Wed Apr 09 14:29:54 2025 [ERROR] [User 2] Failed to send task: Send failed
+Wed Apr 09 14:29:55 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 14:29:55 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 14:29:55 2025 [ERROR] [User 2] Failed to send task: Send failed
+Wed Apr 09 14:29:55 2025 [ERROR] [User 1] Failed to send task: Send failed
+Wed Apr 09 14:29:56 2025 [INFO] [User 2] Sending task ID=205
+Wed Apr 09 14:29:56 2025 [INFO] [User 1] Sending task ID=105
+Wed Apr 09 14:29:56 2025 [ERROR] [User 1] Failed to send task: Send failed
+Wed Apr 09 14:29:56 2025 [ERROR] [User 2] Failed to send task: Send failed
+Wed Apr 09 14:29:57 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 15:22:39 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 15:22:39 2025 [INFO] [User 1] Sending task ID=100
+Wed Apr 09 15:22:39 2025 [INFO] [User 2] Sending task ID=200
+Wed Apr 09 15:22:39 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:39 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:39 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:39 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:40 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:40 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:40 2025 [ERROR] [User 1] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:40 2025 [ERROR] [User 2] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:40 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 15:22:40 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 15:22:40 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:40 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:41 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:41 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:41 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:41 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:42 2025 [ERROR] [User 1] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:42 2025 [ERROR] [User 2] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:42 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 15:22:42 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:42 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 15:22:42 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:42 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:42 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:43 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:43 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:43 2025 [ERROR] [User 1] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:43 2025 [ERROR] [User 2] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:43 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 15:22:43 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:43 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 15:22:43 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:44 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:44 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:44 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:44 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:45 2025 [ERROR] [User 1] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:45 2025 [ERROR] [User 2] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:45 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 15:22:45 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:45 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 15:22:45 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:45 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:45 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:46 2025 [WARN] [User 1] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:46 2025 [WARN] [User 2] Connection failed: Failed to create socket. Retrying in 500ms...
+Wed Apr 09 15:22:46 2025 [ERROR] [User 1] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:46 2025 [ERROR] [User 2] Failed to connect after 3 retries. Skipping task.
+Wed Apr 09 15:22:46 2025 [INFO] [User 2] Finished sending all tasks
+Wed Apr 09 15:22:46 2025 [INFO] [User 1] Finished sending all tasks
+Wed Apr 09 15:22:46 2025 [INFO] All users have finished sending tasks.
+Wed Apr 09 15:26:22 2025 [INFO] Starting Multi-Client Simulation...
+Wed Apr 09 15:26:22 2025 [INFO] [User 2] Sending task ID=200
+Wed Apr 09 15:26:22 2025 [INFO] [User 1] Sending task ID=100
+Wed Apr 09 15:26:22 2025 [INFO] [User 1] Task accepted by server: ID=100
+Wed Apr 09 15:26:22 2025 [INFO] [User 2] Task accepted by server: ID=200
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Sending task ID=201
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Sending task ID=101
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Task accepted by server: ID=101
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Task accepted by server: ID=201
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Sending task ID=202
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Sending task ID=102
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Task accepted by server: ID=202
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Task accepted by server: ID=102
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Sending task ID=103
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Sending task ID=203
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Task accepted by server: ID=103
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Task accepted by server: ID=203
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Sending task ID=104
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Sending task ID=204
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Task accepted by server: ID=104
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Task accepted by server: ID=204
+Wed Apr 09 15:26:23 2025 [INFO] [User 2] Finished sending all tasks
+Wed Apr 09 15:26:23 2025 [INFO] [User 1] Finished sending all tasks
+Wed Apr 09 15:26:23 2025 [INFO] All users have finished sending tasks.

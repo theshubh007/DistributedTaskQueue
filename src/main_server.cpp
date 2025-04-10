@@ -9,6 +9,7 @@
 #include <vector>
 #include <iostream>
 #include <chrono>
+#include <mutex>
 
 #ifdef _WIN32
 #include <winsock2.h>
@@ -18,139 +19,199 @@
 
 using namespace dtq;
 
-// Global queue
 TaskQueue globalTaskQueue;
+std::mutex queueMutex;
 
-// Simple counters for throughput measurement
+// Counters
 std::atomic<long long> tasksCompleted{0};
 std::atomic<long long> totalLatencyMs{0};
+std::atomic<bool> stopServer{false};
+std::atomic<long long> tasksReceived{0};
+std::mutex metricsMutex;
 
-// Helper: current time in ms
+// For throughput
+static auto serverStartTime = std::chrono::steady_clock::now();
+
+// Current time in ms
 static long long nowMs()
 {
     auto tp = std::chrono::steady_clock::now();
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();
-    return static_cast<long long>(ms);
+    return (long long)ms;
 }
 
-void handleOneMessage(MessageType msgType, const std::string &payload, Network::Connection &conn)
+// For throughput - using a sliding window
+static auto lastReportTime = std::chrono::steady_clock::now();
+static std::atomic<long long> tasksSinceLastReport{0};
+
+// Handle exactly one message from the client/worker, then close
+static void handleClientConnection(SOCKET clientSock)
 {
-    switch (msgType)
+    Network::Connection conn(clientSock);
+    
+    // Receive the message
+    MessageType msgType;
+    std::string payload;
+    
+    if (!conn.receiveMessage(msgType, payload))
     {
-    case MessageType::CLIENT_ADD_TASK:
+        Logger::getInstance().log(LogLevel::ERR, "Failed to receive message: " + conn.getLastError());
+        return;
+    }
+    
+    // Process the message based on its type
+    if (msgType == MessageType::CLIENT_ADD_TASK)
     {
+        // Deserialize the task
         Task task = Task::deserialize(payload);
-        // Record enqueue time in ms
-        task.enqueueTimeMs = nowMs();
-
-        // Enqueue
-        if (!globalTaskQueue.enqueue(task))
+        
+        // Add the task to the queue
         {
-            Logger::getInstance().log(LogLevel::ERR,
-                                      "Failed to enqueue task " + std::to_string(task.taskId));
+            std::lock_guard<std::mutex> lock(queueMutex);
+            globalTaskQueue.enqueue(task);
+            Logger::getInstance().log(LogLevel::INFO, "Task added to queue: ID=" + std::to_string(task.taskId));
+        }
+        
+        // Send acknowledgment to the client
+        if (!conn.sendMessage(MessageType::SERVER_TASK_ACCEPTED, ""))
+        {
+            Logger::getInstance().log(LogLevel::ERR, "Failed to send acknowledgment: " + conn.getLastError());
+            return;
+        }
+        
+        // Update metrics
+        {
+            std::lock_guard<std::mutex> lock(metricsMutex);
+            tasksReceived++;
+        }
+    }
+    else if (msgType == MessageType::WORKER_REQUEST_TASK)
+    {
+        // Try to get a task from the queue
+        Task task;
+        bool hasTask = false;
+        
+        {
+            std::lock_guard<std::mutex> lock(queueMutex);
+            auto optTask = globalTaskQueue.dequeue();
+            if (optTask.has_value())
+            {
+                task = optTask.value();
+                hasTask = true;
+            }
+        }
+        
+        if (hasTask)
+        {
+            // Serialize the task and send it to the worker
+            std::string serializedTask = task.serialize();
+            if (!conn.sendMessage(MessageType::SERVER_ASSIGN_TASK, serializedTask))
+            {
+                Logger::getInstance().log(LogLevel::ERR, "Failed to send task to worker: " + conn.getLastError());
+                
+                // Put the task back in the queue
+                std::lock_guard<std::mutex> lock(queueMutex);
+                globalTaskQueue.enqueue(task);
+                return;
+            }
+            
+            // Wait for acknowledgment from worker
+            MessageType ackType;
+            std::string ackPayload;
+            
+            if (!conn.receiveMessage(ackType, ackPayload))
+            {
+                Logger::getInstance().log(LogLevel::ERR, "Failed to receive worker acknowledgment: " + conn.getLastError());
+                
+                // Put the task back in the queue
+                std::lock_guard<std::mutex> lock(queueMutex);
+                globalTaskQueue.enqueue(task);
+                return;
+            }
+            
+            if (ackType != MessageType::WORKER_TASK_RECEIVED)
+            {
+                Logger::getInstance().log(LogLevel::ERR, "Unexpected acknowledgment type from worker");
+                
+                // Put the task back in the queue
+                std::lock_guard<std::mutex> lock(queueMutex);
+                globalTaskQueue.enqueue(task);
+                return;
+            }
+            
+            Logger::getInstance().log(LogLevel::INFO, "Task assigned to worker: ID=" + std::to_string(task.taskId));
         }
         else
         {
-            Logger::getInstance().log(LogLevel::INFO,
-                                      "Enqueued task ID=" + std::to_string(task.taskId));
+            // No tasks available, send empty response
+            if (!conn.sendMessage(MessageType::SERVER_ASSIGN_TASK, ""))
+            {
+                Logger::getInstance().log(LogLevel::ERR, "Failed to send empty task response: " + conn.getLastError());
+                return;
+            }
         }
-        break;
     }
-    case MessageType::WORKER_GET_TASK:
+    else if (msgType == MessageType::WORKER_SUBMIT_RESULT)
     {
-        // Worker requests a task
-        auto optTask = globalTaskQueue.dequeue();
-        if (optTask.has_value())
+        // Deserialize the task result
+        Task completedTask = Task::deserialize(payload);
+        
+        // Process the completed task
+        Logger::getInstance().log(LogLevel::INFO, "Task completed: ID=" + std::to_string(completedTask.taskId) + 
+                                  ", Result=" + completedTask.result);
+        
+        // Update metrics
         {
-            Task t = optTask.value();
-            conn.sendMessage(MessageType::SERVER_SEND_TASK, t.serialize());
-            Logger::getInstance().log(LogLevel::INFO,
-                                      "Sent task ID=" + std::to_string(t.taskId) + " to worker.");
+            std::lock_guard<std::mutex> lock(metricsMutex);
+            tasksCompleted++;
         }
-        else
+        
+        // Send acknowledgment to the worker
+        if (!conn.sendMessage(MessageType::SERVER_RESULT_CONFIRMED, ""))
         {
-            conn.sendMessage(MessageType::SERVER_SEND_TASK, "");
-            Logger::getInstance().log(LogLevel::INFO,
-                                      "No tasks in queue; sent empty response to worker.");
+            Logger::getInstance().log(LogLevel::ERR, "Failed to send result confirmation: " + conn.getLastError());
+            return;
         }
-        break;
     }
-    case MessageType::WORKER_SEND_RESULT:
+    else
     {
-        // Worker finishing a task
-        Task t = Task::deserialize(payload);
-
-        // Measure total latency
-        long long finishMs = nowMs();
-        long long latency = finishMs - t.enqueueTimeMs;
-        totalLatencyMs.fetch_add(latency);
-
-        // Mark completed
-        tasksCompleted.fetch_add(1);
-        globalTaskQueue.updateTaskResult(t.taskId, t.result, t.status);
-
-        // Approx tasks/second => tasksCompleted / (time from start), or just log average
-        long long completed = tasksCompleted.load();
-        long long sumLatency = totalLatencyMs.load();
-        long long avgLatency = (completed == 0) ? 0 : (sumLatency / completed);
-
-        Logger::getInstance().log(LogLevel::INFO,
-                                  "Worker completed task ID=" + std::to_string(t.taskId) +
-                                      " latency=" + std::to_string(latency) + "ms" +
-                                      " avgLatency=" + std::to_string(avgLatency) + "ms" +
-                                      " totalCompleted=" + std::to_string(completed));
-        break;
-    }
-    default:
-        Logger::getInstance().log(LogLevel::WARN, "Received invalid or unexpected message type.");
-        break;
+        Logger::getInstance().log(LogLevel::ERR, "Received unknown message type: " + std::to_string(static_cast<int>(msgType)));
     }
 }
 
-void connectionHandler(Network::Connection conn)
+// Thread that logs tasks/s every 5 seconds using a sliding window
+static void throughputReporter()
 {
-    Logger::getInstance().log(LogLevel::INFO, "New connection accepted.");
-
-    // Instead of reading just once, we loop until the client disconnects.
-    while (true)
+    while (!stopServer.load())
     {
-        MessageType msgType;
-        std::string payload;
+        std::this_thread::sleep_for(std::chrono::seconds(5));
 
-        // If receiveMessage fails, check if it's a normal disconnect (0 bytes) or real error.
-        if (!conn.receiveMessage(msgType, payload))
+        auto now = std::chrono::steady_clock::now();
+        auto elapsedSec = std::chrono::duration_cast<std::chrono::seconds>(now - lastReportTime).count();
+        
+        long long tasksDone = tasksSinceLastReport.exchange(0);  // Reset counter
+        lastReportTime = now;
+
+        if (elapsedSec > 0)
         {
-            std::string err = conn.getLastError();
-            // If the server receives 0 bytes, some implementations return
-            // "Receive failed or connection closed." We detect that case:
-            if (err.find("connection closed") != std::string::npos ||
-                err.find("Receive failed") != std::string::npos)
-            {
-                Logger::getInstance().log(LogLevel::INFO, "Client disconnected normally.");
-            }
-            else
-            {
-                Logger::getInstance().log(LogLevel::ERR,
-                                          "Failed to receive message: " + err);
-            }
-            break; // exit the while loop
+            double tps = static_cast<double>(tasksDone) / elapsedSec;
+            long long totalDone = tasksCompleted.load();
+            
+            Logger::getInstance().log(LogLevel::INFO,
+                                    "[THROUGHPUT REPORT] Recent tasks/sec=" + std::to_string(tps) +
+                                    " totalCompleted=" + std::to_string(totalDone));
         }
-
-        // We got a valid message
-        handleOneMessage(msgType, payload, conn);
     }
-
-    conn.disconnect();
 }
 
 int main()
 {
     Logger::getInstance().setLogFile("server.log");
-    Logger::getInstance().log(LogLevel::INFO, "Starting Distributed Task Queue Server...");
+    Logger::getInstance().log(LogLevel::INFO, "Starting Dist. Task Queue Server (One msg/connection).");
 
     if (!Network::initialize())
     {
-        Logger::getInstance().log(LogLevel::ERR, "Network initialization failed.");
+        Logger::getInstance().log(LogLevel::ERR, "Network init failed.");
         return -1;
     }
 
@@ -158,7 +219,7 @@ int main()
     SOCKET serverSock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (serverSock == INVALID_SOCKET)
     {
-        Logger::getInstance().log(LogLevel::ERR, "Failed to create server socket.");
+        Logger::getInstance().log(LogLevel::ERR, "Server socket creation failed.");
         return -1;
     }
 
@@ -172,7 +233,6 @@ int main()
         Logger::getInstance().log(LogLevel::ERR, "Bind failed.");
         return -1;
     }
-
     if (listen(serverSock, SOMAXCONN) == SOCKET_ERROR)
     {
         Logger::getInstance().log(LogLevel::ERR, "Listen failed.");
@@ -181,36 +241,54 @@ int main()
 
     Logger::getInstance().log(LogLevel::INFO, "Server listening on port 5555...");
 
-    std::vector<std::thread> threads;
+    // Launch stats thread
+    std::thread statsThread(throughputReporter);
 
-    // Accept loop
-    while (true)
-    {
-        sockaddr_in clientAddr;
-        int clientSize = sizeof(clientAddr);
-        SOCKET clientSock = accept(serverSock, reinterpret_cast<sockaddr *>(&clientAddr), &clientSize);
-        if (clientSock == INVALID_SOCKET)
+    std::vector<std::thread> connectionThreads;
+    connectionThreads.reserve(128);
+
+    std::cout << "Server running. Press Enter to stop..." << std::endl;
+    
+    // Run server in a separate thread so we can handle shutdown
+    std::thread serverThread([&]() {
+        while (!stopServer.load())
         {
-            Logger::getInstance().log(LogLevel::ERR, "Accept failed.");
-            continue;
+            sockaddr_in clientAddr;
+            int clientSize = sizeof(clientAddr);
+            SOCKET clientSock = accept(serverSock, reinterpret_cast<sockaddr *>(&clientAddr), &clientSize);
+            if (clientSock == INVALID_SOCKET)
+            {
+                if (!stopServer.load()) {
+                    Logger::getInstance().log(LogLevel::ERR, "Accept failed.");
+                }
+                continue;
+            }
+            connectionThreads.emplace_back(std::thread(handleClientConnection, clientSock));
         }
+    });
 
-        // Construct a Connection from the accepted socket
-        Network::Connection conn(clientSock);
+    // Wait for user input to stop
+    std::cin.get();
+    stopServer.store(true);
+    
+    // Force close the server socket to unblock accept
+    closesocket(serverSock);
+    
+    // Wait for server thread
+    if (serverThread.joinable())
+        serverThread.join();
 
-        // Launch a thread that loops reading messages until client disconnect
-        threads.emplace_back(std::thread(connectionHandler, std::move(conn)));
-    }
+    // Wait for stats thread
+    if (statsThread.joinable())
+        statsThread.join();
 
-    // Never reached in this infinite loop, but for completeness:
-    for (auto &t : threads)
+    // Wait for connection threads
+    for (auto &t : connectionThreads)
     {
         if (t.joinable())
-        {
             t.join();
-        }
     }
-    closesocket(serverSock);
+
     Network::cleanup();
 #endif
 
